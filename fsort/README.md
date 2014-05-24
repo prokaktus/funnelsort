@@ -1,6 +1,6 @@
 # Funnel Sort
 
-Alternative implementation funnel sort, which differ from implementation from parent directory.
+Alternative implementation funnel sort from parent directory.
 
 ## How-to build
 Run `make` from command-line inside directory.
