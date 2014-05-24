@@ -30,23 +30,23 @@ int main(int argc, char *argv[])
 
         fread(p, size, count, fp);
 
-        int i = 0;
+        /*int i = 0;
         
         for (i = 0; i < count; ++i) {
-            //printf("%hu ", p[i]);
+            printf("%hu ", p[i]);
             p_qsort[i] = p[i];
         }
-        printf("\n============\n");
+        printf("\n============\n");*/
         funnel_sort(p, count, size, compare_short);
         qsort(p_qsort, count, size, compare_short);
         int correct = 1;
-        for (i = 0; i < count; ++i) {
+        /*for (i = 0; i < count; ++i) {
             // %hd only for testing.
-            //printf("%hu ", p[i]);
+            printf("%hu ", p[i]);
             if (p_qsort[i] != p[i]) {
                 correct = 0;
             }
-        }
+        }*/
         if (fwp) {
             fwrite(p, size, count, fwp);
             fclose(fwp);
